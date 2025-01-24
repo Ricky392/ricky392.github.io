@@ -1,7 +1,7 @@
 {
   "name": "Car Locator",
   "short_name": "CarLoc",
-  "start_url": "/",
+  "start_url": "/repository/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
