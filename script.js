@@ -7,6 +7,9 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 41.9028, lng: 12.4964 }, // Default: Roma
     zoom: 14,
+    mapTypeControl: false,
+    zoomControl: false,
+    streetViewControl: false
   });
 
   // Recupera l'ultima posizione dell'utente salvata nel localStorage
