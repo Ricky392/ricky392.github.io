@@ -8,72 +8,28 @@
   <link rel="icon" href="/icons/icon-128x128.png">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <!-- Aggiungi Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Car Locator</title>
   <style>
-    #toolbar {
-      position: absolute;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      display: flex;
-      gap: 10px;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 10px;
-      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    button {
-      padding: 10px;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    #spinner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px;
-      height: 50px;
-      border: 5px solid rgba(0, 0, 0, 0.1);
-      border-top: 5px solid #007bff;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      display: none;
-      background: white;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+    /* Aggiungi qui il CSS che ti descrivo più sotto */
   </style>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqLHWZ3t-m_ZUucgFY5reXeoaEfmuW8e0&callback=initMap"
     async defer></script>
 </head>
 
+
 <body>
   <div id="map"></div>
   <div id="toolbar">
-    <button id="remove-location">Rimuovi Posizione</button>
-    <button id="center-user">Centra su di Me</button>
-    <button id="navigate-to-car">Naviga verso l'auto</button>
-    <button id="find-car">Trova l'auto</button>
-    <button id="save-location">Salva Posizione</button>
+    <button id="remove-location" class="buttonClass"><i class="material-icons">location_off</i></button>
+    <button id="center-user" class="buttonClass"><i class="material-icons">my_location</i></button>
+    <button id="navigate-to-car" class="buttonClass"><i class="material-icons">directions_walk</i></button>
+    <button id="find-car" class="buttonClass"><i class="material-icons">directions_car</i></button>
+    <button id="save-location" class="buttonClass"><i class="material-icons">save</i></button>
   </div>
+  <!-- Pulsante di salvataggio posizione -->
+
   <div id="spinner"></div>
   <script src="script.js"></script>
 </body>
