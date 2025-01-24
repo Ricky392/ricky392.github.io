@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#007bff">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/icons/icon-128x128.png">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Car Locator</title>
+  <style>
+    #toolbar {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(0, 0, 0, 0.1);
+      border-top: 5px solid #007bff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      display: none;
+      background: white;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqLHWZ3t-m_ZUucgFY5reXeoaEfmuW8e0&callback=initMap"
+    async defer></script>
+</head>
+
+<body>
+  <div id="map"></div>
+  <div id="toolbar">
+    <button id="remove-location">Rimuovi Posizione</button>
+    <button id="center-user">Centra su di Me</button>
+    <button id="navigate-to-car">Naviga verso l'auto</button>
+    <button id="find-car">Trova l'auto</button>
+    <button id="save-location">Salva Posizione</button>
+  </div>
+  <div id="spinner"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
